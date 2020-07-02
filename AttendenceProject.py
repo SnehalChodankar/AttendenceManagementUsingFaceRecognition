@@ -101,4 +101,7 @@ while True:
         markAttendence(name)
 
     cv2.imshow('Webcam', img)
-    cv2.waitKey(1)
+    if cv2.waitKey(20) & 0xFF == ord('q'):
+        break
+        
+cv2.destroyAllWindows()
